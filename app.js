@@ -16,6 +16,8 @@ app.get('/meunome', (req, res) => res.send('Meu nome é Caio Hygino Perlin de Li
 
 app.get('/tico', (req, res) => res.send('teco.'));
 
+app.get('/pokemons', (req, res) => res.type('html').send(pokeHtml));
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
@@ -69,3 +71,28 @@ const html = `
   </body>
 </html>
 `
+
+const pokeHtml = `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+</head>
+
+<body>
+    <h2>Primeiros pokemons capturados pelo Ash, em ordem de captura:</h2>
+    <ol>
+        <li>Caterpie</li>
+        <li>Charmander</li>
+        <li>Bulbasaur</li>
+        <li>Squirtle</li>
+        <li>Primeape</li>
+        <li>Pidgeotto</li>
+        <li>Tauros</li>
+        <li>Krabby</li>
+    </ol>
+</body>
+
+</html>`
