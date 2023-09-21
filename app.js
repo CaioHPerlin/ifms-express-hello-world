@@ -18,6 +18,8 @@ app.get('/tico', (req, res) => res.send('teco.'));
 
 app.get('/pokemons', (req, res) => res.type('html').send(pokeHtml));
 
+app.post('/series', (req, res) => res.send(JSON.stringify(series)));
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
@@ -96,3 +98,9 @@ const pokeHtml = `<!DOCTYPE html>
 </body>
 
 </html>`
+
+const series = [
+  'Sonny Boy',
+  'Breaking Bad',
+  'One Piece'
+]
